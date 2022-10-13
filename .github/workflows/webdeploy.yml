@@ -31,9 +31,9 @@ jobs:
       - name: Determine Build Version
         id: gitversion
         uses: gittools/actions/gitversion/execute@v0.9.7
-      
+        
       - name: Display Build Version
-        run: |
+        run:  |
           echo "Build version: ${{ steps.gitversion.outputs.semVer }}"
           echo "${{ steps.gitversion.outputs.semVer }}" > ./Source/Frontend/public/version.txt
         
